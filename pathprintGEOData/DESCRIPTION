@@ -1,0 +1,12 @@
+Package: pathprintGEOData
+Version: 0.99.1
+Title: Pathway fingerprint vectors representing a subsection of arrays from the GEO data repository
+Description: Pathway Fingerprint vectors that have been pre-calculated for ~160,000 publicly
+ available arrays from the GEO corpus, spanning 6 species and 31 platforms, together with their associated metadata.
+Author: Gabriel Altschuler, Uma Saxena
+Maintainer: Sokratis Kariotis <s.kariotis@sheffield.ac.uk>
+License: GPL
+Depends: pathprint
+LazyData: yes
+biocViews: Transcription, GeneExpression, KEGG, Reactome
+Packaged: 2016-12-12 14:01:00 UTC; SokratisKariotis
