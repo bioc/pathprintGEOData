@@ -8,4 +8,5 @@ Maintainer: Sokratis Kariotis <s.kariotis@sheffield.ac.uk>
 License: GPL
 LazyData: yes
 biocViews: Transcription, GeneExpression, KEGG, Reactome
+NeedsCompilation: no
 Packaged: 2016-12-12 14:01:00 UTC; SokratisKariotis
