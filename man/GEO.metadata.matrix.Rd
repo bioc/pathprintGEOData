@@ -30,6 +30,7 @@ Barrett et al. NCBI GEO: mining tens of millions of expression profiles--databas
 Altschuler G, Hofmann O, Payne R, Kalatskaya I, Stein L, Cai T, Hide W \emph{in preparation}
 }
 \examples{
+library(pathprint)
 # create consensus fingerprint for pluripotent samples
 pluripotent.consensus<-consensusFingerprint(
 	GEO.fingerprint.matrix[,pluripotents.frame$GSM], threshold=0.9)
