@@ -9,4 +9,5 @@ License: GPL
 LazyData: yes
 biocViews: Transcription, GeneExpression, KEGG, Reactome
 NeedsCompilation: no
+Suggests: pathprint 
 Packaged: 2016-12-12 14:01:00 UTC; SokratisKariotis
