@@ -1,5 +1,5 @@
 Package: pathprintGEOData
-Version: 0.99.12
+Version: 0.99.13
 Title: Pathway fingerprint vectors representing a subsection of arrays from the GEO data repository
 Description: Pathway Fingerprint vectors that have been pre-calculated for ~160,000 publicly
  available arrays from the GEO corpus, spanning 6 species and 31 platforms, together with their associated metadata.
@@ -10,5 +10,5 @@ LazyData: yes
 biocViews: Transcription, GeneExpression, KEGG, Reactome
 NeedsCompilation: no
 Suggests: pathprint 
-check(force_suggests = FALSE)
+_R_CHECK_FORCE_SUGGESTS_: FALSE
 Packaged: 2016-12-12 14:01:00 UTC; SokratisKariotis
