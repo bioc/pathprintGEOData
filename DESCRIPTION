@@ -10,5 +10,5 @@ LazyData: yes
 biocViews: Transcription, GeneExpression, KEGG, Reactome
 NeedsCompilation: no
 Suggests: pathprint 
-_R_CHECK_FORCE_SUGGESTS_=TRUE
+check(force_suggests = FALSE)
 Packaged: 2016-12-12 14:01:00 UTC; SokratisKariotis
