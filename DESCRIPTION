@@ -12,5 +12,3 @@ NeedsCompilation: no
 Suggests: pathprint 
 CheckVignettes: false
 NeedsCompilation: false
-_R_CHECK_FORCE_SUGGESTS_: false
-Packaged: 2016-12-12 14:01:00 UTC; SokratisKariotis
