@@ -12,3 +12,4 @@ NeedsCompilation: no
 Suggests: pathprint 
 CheckVignettes: false
 NeedsCompilation: false
+Depends: SummarizedExperiment
