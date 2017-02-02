@@ -7,7 +7,7 @@ Author: Gabriel Altschuler, Uma Saxena
 Maintainer: Sokratis Kariotis <s.kariotis@sheffield.ac.uk>
 License: GPL
 LazyData: yes
-biocViews: Transcription, GeneExpression, KEGG, Reactome
+biocViews: ExperimentData, ExpressionData, Homo_sapiens_Data, Mus_musculus_Data, Drosophila_melanogaster_Data, MicroarrayData, GEO
 NeedsCompilation: no
 Suggests: pathprint 
 CheckVignettes: false
