@@ -1,5 +1,6 @@
 \name{GEO.fingerprint_metadata.matrix}
 \alias{GEO.fingerprint_metadata.matrix}
+\alias{pathprintGEOData}
 \docType{data}
 \title{ GEO pathway fingerprint matrix and their metadata data frame
 }
