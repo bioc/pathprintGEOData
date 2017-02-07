@@ -10,6 +10,5 @@ LazyData: yes
 biocViews: ExperimentData, ExpressionData, MicroarrayData, GEO, Homo_sapiens_Data, Mus_musculus_Data, Drosophila_melanogaster_Data, Rattus_norvegicus_Data, Caenorhabditis_elegans_Data, Danio_rerio_Data
 NeedsCompilation: no
 Suggests: pathprint 
-CheckVignettes: false
 NeedsCompilation: false
 Depends: SummarizedExperiment
