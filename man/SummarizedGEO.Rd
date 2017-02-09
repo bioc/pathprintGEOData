@@ -19,8 +19,7 @@ The fingerprint matrix contains ternary scores for 633 pathways that have been p
  
 }
 \usage{
-GEO.fingerprint.matrix
-GEO.metadata.matrix
+data(SummarizedGEO)
 }
 
 \format{
@@ -48,36 +47,39 @@ Barrett et al. NCBI GEO: mining tens of millions of expression profiles--databas
 }
 
 \examples{
-library(pathprint)
-# create consensus fingerprint for pluripotent samples
-pluripotent.consensus<-consensusFingerprint(
-	GEO.fingerprint.matrix[,pluripotents.frame$GSM], threshold=0.9)
+# use the SummarizedExperiment library
+library(SummarizedExperiment)
 
-# calculate distance from the pluripotent consensus
-geo.pluripotentDistance<-consensusDistance(
-	pluripotent.consensus, GEO.fingerprint.matrix)
+# load  the data
+data(SummarizedGEO)
 
-# plot histograms
-par(mfcol = c(2,1), mar = c(0, 4, 4, 2))
-geo.pluripotentDistance.hist<-hist(geo.pluripotentDistance[,"distance"],
-	nclass = 50, xlim = c(0,1), main = "Distance from pluripotent consensus")
-par(mar = c(7, 4, 4, 2))
-hist(geo.pluripotentDistance[pluripotents.frame$GSM, "distance"],
-	breaks = geo.pluripotentDistance.hist$breaks, xlim = c(0,1), 
-	main = "", xlab = "above: all GEO, below: pluripotent samples")
-	
+# objects in environment
+objects()
+[1] "result"
 
-# annotate top 100 matches not in original seed with metadata
-geo.pluripotentDistance.noSeed<-geo.pluripotentDistance[
-	!(rownames(geo.pluripotentDistance) \%in\% pluripotents.frame$GSM),
-	]
+# object type
+class(result)
+[1] "SummarizedExperiment"
 
+# package attribute of resulted object
+attr(result,"package")
+[1] "SummarizedExperiment"
 
-top.noSeed.meta<-GEO.metadata.matrix[
-	match(head(rownames(geo.pluripotentDistance.noSeed), 1000),
-		GEO.metadata.matrix$GSM),
-	]
-head(top.noSeed.meta[,c("GSM", "GPL", "Source")],10)
+# SummarizedExperiment objectc specifications
+head(result)
+
+# extract GEO.fingerprint.matrix
+GEO.fingerprint.matrix = assays(result)$fingerprint
+
+# extract GEO.metadata.matrix
+GEO.metadata.matrix = colData(result)
+
+# get dimensions
+dim(GEO.fingerprint.matrix)
+[1]    633 188390
+dim(GEO.metadata.matrix)
+[1] 188390      6
+
 }
 
 \keyword{datasets}
