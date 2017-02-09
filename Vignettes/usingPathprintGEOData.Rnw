@@ -39,7 +39,7 @@ library(pathprint)
 library(SummarizedExperiment)
 
 # load  the data
-data(SummarizedGEO)
+data(pathprintSummarizedGEOData)
 
 # extract GEO.fingerprint.matrix and GEO.metadata.matrix
 GEO.fingerprint.matrix = assays(result)$fingerprint
