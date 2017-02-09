@@ -17,26 +17,21 @@
 \maketitle
 
 \section{Description}
-The package \href{https://bioconductor.org/packages/release/bioc/html/GEOmetadb.html}{GEOMetaDB} was used to obtain a list of the most highly represented one-channel gene expression platforms (GPLs) in the \href{https://www.ncbi.nlm.nih.gov/geo/}{GEO database} that profiled Homo sapiens, Mus musculus, Rattus norvegicus, Danio rerio, Drosophila melanogaster, and Caenorhabditis elegans and their associated arrays (GSMs). The package  \href{https://bioconductor.org/packages/release/bioc/html/GEOquery.html}{GEOquery} was used to retrieve normalized expression tables for all of the experiments, all normalization methods were accepted. After discarding incomplete records, the expression data was mapped to Entrez Gene identifications using systematically updated annotations from \href{http://ailun.ucsf.edu/}{AILUN}(Array Information Library Universal Navigator). Multiple probes were merged to unique Entrez Gene IDs by taking the mean probe set intensity.
+This package contains the data used by pathprint package, including a fingerprint matrix and a metadata data frame. The fingerprint matrix contains ternary scores for 633 pathways that have been pre-calculated for 188,390 publicly available arrays from the GEO corpus, spanning 6 species (Homo sapiens, Mus musculus, Rattus norvegicus, Danio rerio, Drosophila melanogaster and Caenorhabditis elegans) and 31 platforms. The metadata data frame includes experiment IDs, platform, species and a selection of the record description provided by the GEO database.
 
-H. sapiens canonical pathway gene sets were compiled from Reactome, Wiki-pathways and KEGG (Kyoto Encyclopedia of Genes and Genomes). Static modules were constructed independently by decomposing a network that extended curated pathways with non-curated sources of information, including protein-protein interactions, gene co-expression, protein domain interaction, GO annotations and text-mined protein interactions (see Altschuler et al). M. musculus, R. norvegicus, D. rerio, D. melanogaster, and C. elegans gene sets were inferred using homology based on the \href{https://www.ncbi.nlm.nih.gov/homologene}{HomoloGene} database.
-
-Pathway expression scores were calculated for each pathway in each array based on the mean squared ranked expression of the member genes. The full set of GEO experiments was used to calculate a static pathway expression background distribution for each pathway across each platforms. A signed probability of expression (POE) was calculated based on a two-component uniform-normal mixture model, representing the probability that a pathway expression score has significant low (negative) or high (positive) expression. POE values were converted to a ternary score (-1,0,1) by application of a symmetric threshold to produce the final pathprint matrix.
-
-For complete details of method and references please see Altschuler et al. (2013, PMID: 23890051).
-
-The fingerprint matrix contains ternary scores for 633 pathways that have been pre-calculated for 188,390 publicly available arrays from the GEO corpus, spanning 6 species and 31 platforms, using the method described in Altschuler et al. (2013, PMID: 23890051).
-
-The metadata data frame includes experiment IDs, platform, species and a selection of the record description provided by the GEO database.
+The data in this package were obtained using the method described by Altschuler et al. (2013, PMID: 23890051). The package  \href{https://bioconductor.org/packages/release/bioc/html/GEOquery.html}{GEOquery} was used to retrieve normalized expression tables for all of the experiments of each platform, all normalization methods were accepted. The expression data was mapped to Entrez Gene identifications using systematically updated annotations from \href{http://ailun.ucsf.edu/}{AILUN}(Array Information Library Universal Navigator). Multiple probes were merged to unique Entrez Gene IDs by taking the mean probe set intensity.  H. sapiens canonical pathway gene sets were compiled from Reactome, Wiki-pathways and KEGG (Kyoto Encyclopedia of Genes and Genomes). Static modules were constructed independently by decomposing a network that extended curated pathways with non-curated sources of information, including protein-protein interactions, gene co-expression, protein domain interaction, GO annotations and text-mined protein interactions. M. musculus, R. norvegicus, D. rerio, D. melanogaster, and C. elegans gene sets were inferred using homology based on the \href{https://www.ncbi.nlm.nih.gov/homologene}{HomoloGene} database. Pathway expression scores were calculated for each pathway in each array based on the mean squared ranked expression of the member genes. The full set of GEO experiments was used to calculate a static pathway expression background distribution for each pathway across each platform. A signed probability of expression (POE) was calculated based on a two-component uniform-normal mixture model, representing the probability that a pathway expression score has significant low (negative) or high (positive) expression. POE values were converted to a ternary score (-1,0,1) by application of a symmetric threshold to produce the final pathprint matrix.
 
 \section{Using pathprintGEOData with pathprint package}
 
-The present data are primarily used by the pathprint package.Therefore, for the following examples/functions to work, the pathprint package needs to be installed. For further explanations regarding the specific functions please refer to pathprint. Furthermore, the SummarizedExperiment package is needed to the extract the two matrices from the SummarizedExperiment object.
+The data in this package are primarily used by the pathprint package. For the following examples to work, the pathprint package needs to be installed. For further explanations of some of the functions mentioned in the examples please refer to pathprint. Furthermore, the SummarizedExperiment package is required to extract the two matrices from the SummarizedExperiment object.
 
 <<>>=
 # use the pathprint library
 library(pathprint)
 library(SummarizedExperiment)
+
+# see available platforms
+names(chipframe)
 
 # load  the data
 data(pathprintSummarizedGEOData)
