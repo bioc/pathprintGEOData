@@ -1,6 +1,5 @@
-\name{GEO.fingerprint_metadata.matrix}
-\alias{GEO.fingerprint_metadata.matrix}
-\alias{pathprintGEOData}
+\name{pathprintSummarizedGEOData}
+\alias{pathprintSummarizedGEOData}
 \docType{data}
 \title{ GEO pathway fingerprint matrix and their metadata data frame
 }
@@ -47,23 +46,17 @@ Barrett et al. NCBI GEO: mining tens of millions of expression profiles--databas
 }
 
 \examples{
-# use the SummarizedExperiment library
-library(SummarizedExperiment)
-
 # load  the data
 data(pathprintSummarizedGEOData)
 
 # objects in environment
 objects()
-[1] "result"
 
 # object type
 class(result)
-[1] "SummarizedExperiment"
 
 # package attribute of resulted object
 attr(result,"package")
-[1] "SummarizedExperiment"
 
 # SummarizedExperiment objectc specifications
 head(result)
@@ -76,9 +69,7 @@ GEO.metadata.matrix = colData(result)
 
 # get dimensions
 dim(GEO.fingerprint.matrix)
-[1]    633 188390
 dim(GEO.metadata.matrix)
-[1] 188390      6
 
 }
 
