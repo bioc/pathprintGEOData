@@ -29,11 +29,13 @@ The data in this package are primarily used by the pathprint package. For the fo
 # use the pathprint library
 library(pathprint)
 
+# load  the data
+ds = c("chipframe", "genesets","pathprint.Hs.gs"
+       ,"platform.thresholds","pathprintSummarizedGEOData", "pluripotents.frame")
+data(list = ds)
+
 # see available platforms
 names(chipframe)
-
-# load  the data
-data(pathprintSummarizedGEOData)
 
 # extract GEO.fingerprint.matrix and GEO.metadata.matrix
 GEO.fingerprint.matrix = assays(result)$fingerprint
