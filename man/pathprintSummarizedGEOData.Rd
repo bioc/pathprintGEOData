@@ -15,8 +15,8 @@ For complete details of method and references please see Altschuler et al. (2013
 
 The fingerprint matrix contains ternary scores for 633 pathways that have been pre-calculated for 188,390 publicly available arrays from the GEO corpus, spanning 6 species and 31 platforms, using the method described in Altschuler et al. (2013, PMID: 23890051).
 
- The metadata data frame includes experiment IDs, platform, species and a selection of the record description provided by the GEO database.
- 
+The metadata data frame includes experiment IDs, platform, species and a selection of the record description provided by the GEO database.
+
 }
 \usage{
 data(pathprintSummarizedGEOData)
@@ -24,7 +24,7 @@ data(pathprintSummarizedGEOData)
 
 \format{
 The metadata contain the following 7 variables for 188390 samples.
-  \describe{
+\describe{
     \item{\code{GSM}}{GEO sample ID}
     \item{\code{GSE}}{GEO series ID}
     \item{\code{GPL}}{GEO platform ID}
@@ -32,7 +32,7 @@ The metadata contain the following 7 variables for 188390 samples.
     \item{\code{Title}}{GEO description - Title}
     \item{\code{Source}}{GEO description - Source}
     \item{\code{Characteristics}}{GEO description - Characteristic}
-  }
+}
 }
 
 \source{
@@ -40,10 +40,10 @@ Primary data was retrieved from \url{http://www.ncbi.nlm.nih.gov/geo/}
 }
 \references{
 Altschuler et al. Pathprinting: An integrative approach to understand the functional basis of disease.
- \emph{Genome Med} (2013) vol.5 pp. 68
+\emph{Genome Med} (2013) vol.5 pp. 68
 
 Barrett et al. NCBI GEO: mining tens of millions of expression profiles--database and tools update.
- \emph{Nucleic acids research} (2007) vol. 35 (Database issue) pp. D760-5
+\emph{Nucleic acids research} (2007) vol. 35 (Database issue) pp. D760-5
 }
 
 \examples{
