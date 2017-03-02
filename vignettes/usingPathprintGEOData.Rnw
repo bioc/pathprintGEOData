@@ -1,3 +1,4 @@
+%\VignetteIndexEntry{pathprintGEOData}
 \documentclass{article}
 \usepackage{Sweave}
 \usepackage{amsmath}

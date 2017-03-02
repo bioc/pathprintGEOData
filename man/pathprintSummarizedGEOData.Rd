@@ -1,5 +1,6 @@
 \name{pathprintSummarizedGEOData}
 \alias{pathprintSummarizedGEOData}
+\alias{result}
 \docType{data}
 \title{ GEO pathway fingerprint matrix and their metadata data frame
 }
