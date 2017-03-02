@@ -1,5 +1,5 @@
 Package: pathprintGEOData
-Version: 0.99.24
+Version: 0.99.25
 Title: Pathway fingerprint vectors representing a subsection of arrays from the GEO data repository
 Description: Pathway Fingerprint vectors that have been pre-calculated for ~160,000 publicly
  available arrays from the GEO corpus, spanning 6 species and 31 platforms, together with their associated metadata.
@@ -8,7 +8,7 @@ Maintainer: Sokratis Kariotis <s.kariotis@sheffield.ac.uk>
 License: GPL
 LazyData: yes
 biocViews: ExperimentData, ExpressionData, MicroarrayData, GEO, Homo_sapiens_Data, Mus_musculus_Data, Drosophila_melanogaster_Data, Rattus_norvegicus_Data, Caenorhabditis_elegans_Data, Danio_rerio_Data
-NeedsCompilation: NeedsCompilation: false
+NeedsCompilation: no
 Suggests: pathprint 
 Depends: R (>= 2.10), SummarizedExperiment
 RoxygenNote: 6.0.1
