@@ -19,7 +19,7 @@ The metadata data frame includes experiment IDs, platform, species and a selecti
 
 }
 \usage{
-data(pathprintSummarizedGEOData)
+data(result)
 }
 
 \format{
@@ -48,7 +48,7 @@ Barrett et al. NCBI GEO: mining tens of millions of expression profiles--databas
 
 \examples{
 # load  the data
-data(pathprintSummarizedGEOData)
+data(result)
 
 # objects in environment
 objects()
