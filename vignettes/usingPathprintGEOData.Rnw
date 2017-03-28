@@ -29,10 +29,13 @@ The data in this package are primarily used by the pathprint package. For the fo
 <<>>=
 # use the pathprint library
 library(pathprint)
+library(SummarizedExperiment)
 
 # load  the data
+data(compressed_result)
+
 ds = c("chipframe", "genesets","pathprint.Hs.gs"
-       ,"platform.thresholds","pathprintSummarizedGEOData", "pluripotents.frame")
+       ,"platform.thresholds", "pluripotents.frame")
 data(list = ds)
 
 # see available platforms
