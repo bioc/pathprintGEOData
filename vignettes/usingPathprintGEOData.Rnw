@@ -30,6 +30,7 @@ The data in this package are primarily used by the pathprint package. For the fo
 # use the pathprint library
 library(pathprint)
 library(SummarizedExperiment)
+library(pathprintGEOData)
 
 # load  the data
 data(compressed_result)
