@@ -47,8 +47,10 @@ Barrett et al. NCBI GEO: mining tens of millions of expression profiles--databas
 }
 
 \examples{
+library(SummarizedExperiment)
+library(pathprintGEOData)
 # load  the data
-data(result)
+data(compressed_result)
 
 # objects in environment
 objects()
