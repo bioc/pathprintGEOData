@@ -82,7 +82,7 @@ geo.pluripotentDistance.noSeed<-geo.pluripotentDistance[
 
 top.noSeed.meta<-GEO.metadata.matrix[
     match(
-     head(rownames(geo.pluripotentDistance.noSeed), 1000),
+     head(rownames(geo.pluripotentDistance.noSeed), 100),
                                rownames(GEO.metadata.matrix)),
     ]
 print(top.noSeed.meta[, c(1:4)])
