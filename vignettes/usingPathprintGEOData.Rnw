@@ -85,5 +85,6 @@ top.noSeed.meta<-GEO.metadata.matrix[
      head(rownames(geo.pluripotentDistance.noSeed), 1000),
                                rownames(GEO.metadata.matrix)),
     ]
+print(top.noSeed.meta[, c(1:4)])
 @
 \end{document}
