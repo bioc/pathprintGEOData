@@ -29,10 +29,14 @@ The data in this package are primarily used by the pathprint package. For the fo
 <<>>=
 # use the pathprint library
 library(pathprint)
+library(SummarizedExperiment)
+library(pathprintGEOData)
 
 # load  the data
+data(compressed_result)
+
 ds = c("chipframe", "genesets","pathprint.Hs.gs"
-       ,"platform.thresholds","pathprintSummarizedGEOData", "pluripotents.frame")
+       ,"platform.thresholds", "pluripotents.frame")
 data(list = ds)
 
 # see available platforms
@@ -77,9 +81,10 @@ geo.pluripotentDistance.noSeed<-geo.pluripotentDistance[
 	]
 
 top.noSeed.meta<-GEO.metadata.matrix[
-	match(
-	  head(rownames(geo.pluripotentDistance.noSeed), 1000),
-		GEO.metadata.matrix$GSM),
-	]
+    match(
+     head(rownames(geo.pluripotentDistance.noSeed), 100),
+                               rownames(GEO.metadata.matrix)),
+    ]
+print(top.noSeed.meta[, c(1:4)])
 @
 \end{document}
