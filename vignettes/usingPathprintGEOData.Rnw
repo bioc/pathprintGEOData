@@ -19,10 +19,9 @@
 
 \section{Description}
 This package contains the data used by the pathprint package, including 
-fingerprint and metadata data frames. The fingerprint matrices contain pathway 
-Fingerprint vectors that have been pre-calculated for ~390,000 publicly 
-available arrays from the GEO corpus, spanning 6 species and 31 platforms. All 
-data are accompanied by their associated metadata. 
+fingerprint and metadata data frames and chipframe. The fingerprint matrices 
+contain pathway Fingerprint vectors that have been pre-calculated for ~390,000 publicly available arrays from the GEO corpus, spanning 6 species and 31 
+platforms. All data are accompanied by their associated metadata. 
 
 The data in this package were obtained using the method described by Altschuler 
 et al. (2013, PMID: 23890051). The package  
