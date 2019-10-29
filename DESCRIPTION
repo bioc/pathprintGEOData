@@ -1,5 +1,5 @@
 Package: pathprintGEOData
-Version: 1.15.0
+Version: 1.16.0
 Title: Pathway fingerprint vectors representing a subsection of arrays from the GEO data repository
 Description: Pathway Fingerprint vectors that have been pre-calculated for ~390,000 publicly available arrays from the GEO corpus, spanning 6 species and 31 platforms. All data are accompanied by their associated metadata. 
 Author: Gabriel Altschuler, Sokratis Kariotis
